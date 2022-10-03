@@ -1,0 +1,226 @@
+/* Header Section */
+.header {
+    color: $primary-color;
+    width: 100%;
+    height: 34.64rem;
+    background: url('../images/Main-background-image.png');
+    @include lgphone {
+        background: url('../images/Main-background-image-phone.png');
+        background-size: cover;
+        height: 25.56rem;
+    }
+    background-size: cover;
+    .header-group {
+        display: flex;
+        width: 100%;
+        padding: 5% 24%;
+        @include ntbk {
+            padding: 5% 18%;
+        }
+        @include smlntbk {
+            padding: 5% 12%;
+        }
+        @include lgtablet {
+            padding: 5% 3%;
+        }
+        @include tablet {
+            padding: 5% 25%;
+        }
+        @include lgphone {
+            padding: 5% 15%;
+        }
+        @include phone {
+            padding: 5% 10%;
+        }
+        .logo {
+            display: flex;
+            width: 50%;
+            cursor: pointer;
+        }
+        .btn-in-header {
+            display: flex;
+            width: 50%;
+            justify-content: right;
+            @include tablet {
+                display: none;
+            }
+            .btn {
+                background-color: hsl(340deg 100% 32%);
+                border-radius: 12px;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                outline-offset: 4px;
+                .front {
+                    display: block;
+                    padding: 15px 18px;
+                    border-radius: 12px;
+                    font-size: 0.88rem;
+                    background: hsl(345deg 100% 47%);
+                    font-family: Mulish-Black;
+                    color: $primary-color;
+                    transform: translateY(-6px);
+                }
+            }
+            .front:hover {
+                background-color: #cf002d;
+            }
+            .btn:active .front {
+                transform: translateY(-2px);
+            }
+        }
+    }
+    .div-main-text {
+        display: flex;
+        width: 100%;
+        .Main-text{
+            text-align: center;
+            font-family: Mulish-Black;
+            width: 43.38rem;
+            height: 20.31rem;
+            margin: auto;
+            line-height: 5rem;
+            font-size: 3.13rem;
+            @include tablet {
+                padding-top: 3%;
+                height: 16.63rem;
+                font-size: 1.88rem;
+                line-height: 2.81rem;
+            }
+            @include lgphone {
+                height: 12.63rem;
+            }
+
+            span {
+                display: block;
+                opacity: 0;
+                animation: reveal 0.5s forwards var(--delay);
+            }
+            @keyframes reveal {
+                from { translate: 0 100px; }
+                to { translate: none; opacity: 1; }
+            }
+        }
+    }
+    .btn-for-mobile {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        @include tablet {
+            display: flex;
+        }
+        .btn {
+            background-color: hsl(340deg 100% 32%);
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            outline-offset: 4px;
+            .front {
+                display: block;
+                padding: 15px 18px;
+                border-radius: 12px;
+                font-size: 0.88rem;
+                background: hsl(345deg 100% 47%);
+                font-family: Mulish-Black;
+                color: $primary-color;
+                transform: translateY(-6px);
+            }
+        }
+        .front:hover {
+            background-color: #cf002d;
+        }
+        .btn:active .front {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+/* footer section*/
+.footer {
+    color: $primary-color;
+    width: 100%;
+    height: 45.06rem;
+    margin-top: 8%;
+    background: url('../images/footer-background-image-phone.png');
+    background-size: cover;
+    @include lgphone {
+        background: url('../images/footer-background-image-phone.png');
+        background-size: cover;
+        height: 28.06rem;
+    }
+    .footer-text {
+        display: flex;
+        width: 100%;
+        .ft-txt{
+            text-align: center;
+            font-family: Mulish-Black;
+            width: 41rem;
+            height: 7.38rem;
+            margin: 6% auto;
+            line-height: 3.69rem;
+            font-size: 3rem;
+            @include lgtablet {
+                margin: 10% auto;
+            }
+            @include tablet {
+                line-height: 2.13rem;
+                font-size: 1.5rem;
+                width: 17.63rem;
+                height: 6.38rem;
+                margin: 8% auto;
+            }
+        }
+    }
+    .footer-num-email {
+        font-family: Mulish-bold;
+        line-height: 2.5rem;
+        font-size: 1.88rem;
+        @include tablet {
+            font-size: 1.38rem;
+        }
+        .num {
+            width: 50%;
+            text-align: right;
+            padding-right: 2%;
+            @include tablet {
+                width: 100%;
+                padding-left: 0%;
+                text-align: center;
+            }
+        }
+        .gmail {
+            width: 50%;
+            text-align: left;
+            color: $specific-color;
+            padding-left: 2%;
+            @include tablet {
+                width: 100%;
+                padding-left: 0%;
+                text-align: center;
+            }
+        }
+    }
+    .footer-logo {
+        text-align: center;
+        margin: 7% 0%;
+        @include ntbk {
+            padding: 0% 0%;
+        }
+        @include smlntbk {
+            padding: 0% 12%;
+        }
+        @include lgtablet {
+            padding: 6% 3%;
+        }
+        @include tablet {
+            margin: 8% 3%;
+        }
+        @include lgphone {
+            margin: 0% 3%;
+        }
+        @include phone {
+            padding: 8% 0%;
+        }
+    }
+}

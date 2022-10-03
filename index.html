@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../JS/modal.js"></script>
+    <script src="../JS/contact-form.js"></script>
+    <title>UX Design</title>
+    <link rel="icon" href="../images/icon.ico">
+</head>
+<body>
+    <!-- Header section  -->
+    <header class="header">
+        <div class="header-group">
+            <div class="logo">
+                <img src="../images/logos/logo.svg" alt="logo">
+            </div>
+            <div class="btn-in-header">
+                <button class="btn" onclick="openModal()"><span class="front">Mám záujem o UX audit</span></button>
+            </div>
+        </div>
+        
+        <div class="div-main-text">
+            <h1 class="Main-text">
+                <span style="--delay: 0s;"> Zvýšte svoje zisky </span>
+                <span style="--delay: 0.15s;">optimalizáciou vášho </span>
+                <span style="--delay: 0.2s;">eshopu.</span>
+            </h1>
+        </div>
+        <div class="btn-for-mobile">
+            <button class="btn" onclick="openModal()"><span class="front">Mám záujem o UX audit</span></button>
+        </div>
+    </header>
+
+    <!-- Modal content -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-content-header">
+            <span class="close">&times;</span>
+            <h1 class="modal-textt">Jednoducho nám napíšte a my sa vám ozveme.</h1>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="POST" id="my-form">
+
+                <div class="form-group">
+                  <label for="name"> Meno: <b style="color: #EE325C;">*</b></label>
+                  <input type="text"  name="meno">
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group g2">
+                        <label for="email">Email: <b style="color: #EE325C;">*</b></label>
+                        <input type="email"  name="email">
+                    </div>
+                    <div class="form-group g3">
+                        <label for="number">Tel. číslo:</label>
+                        <input type="text" name="cislo">
+                    </div>
+                  
+                </div>
+
+                <div class="form-group">
+                  <label for="webname">Webstránka:</label>
+                  <input type="text"  name="webname">
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Poznámka:</label>
+                  <textarea class="txt-area" name="sprava" placeholder="Je niečo čo by ste sa nás chceli spýtat?" required></textarea>
+                </div>
+
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" value="submit">Odoslať</button>
+            <div id="status"></div>
+          </div>
+        </div>
+      
+    </div>
+
+    <script src="../JS/contact-form.js"></script>
+    <script src="../JS/modal.js"></script>
+
+    <!-- Whole body section  -->
+    <section class="main-container">
+        <!-- First Title on left and logo of google on right side section -->
+        <section class="group-title-logos imp">
+            <div class="left-title">
+                <span style="--delay: 0.1s;">Rýchle <b class="word">výsledky</b> </span>
+                <span style="--delay: 0.2s;">pomocou UX auditu.</span>
+                
+            </div>
+            <div class="right-logos">
+                <img class="google-logo" src="../images/logos/google-logo.svg" alt="">
+                <img class="member-log" src="../images/logos/member-logo.jpg" alt="" >
+            </div>
+        </section>
+        <!-- Second text on left and list on right side section -->
+        <section class="group-text-list imp">
+            <div class="text-left">
+                <p>UX auditom Vášho riešenia lepšie pochopíte, ako Vaši zákazníci používajú Váš produkt, <b style="font-family: Mulish-ExtraBold;">zvýšite ich spokojnosť a hlavne Vaše zisky.</b></p>
+            </div>
+            <div class="list-right">
+                <ul class="list">
+                    <li> Odhalíme nedostatky na Vašej stránke</li>
+                    <li> Zvýšime konverzný pomer Vašich stránok</li>
+                    <li> Zvýšime výkon markentigových kampaní</li>
+                    <li> Znížime vaše náklady na vývoj</li>
+                    <li> Zvýšime návštevnosť vašich stránok</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Section text on left  and button on right side -->
+        <section class="group-text-btn imp">
+            <div class="short-text-left">
+                <p>Dosiahnite lepšie výsledky Vašej webstránky alebo e-shopu <b style="font-family: Mulish-ExtraBold;">pomocou UX auditu.</b></p>
+            </div>
+            <div class="btn-right">
+                <button class="btn2" onclick="openModal()"><span class="front">Mám záujem o UX audit</span></button>
+            </div>
+        </section>
+        <!-- Section of 2 boxes -->
+        <section class="group-two-boxes imp">
+            <div class="left-box">
+                <p class="text-in-daBOX"><img class="apo" src="../images/logos/apostrophe-symbol.svg" alt="">Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu … <b style="color: #EE325C;cursor: pointer;">čítať viac</b></p>
+                <div class="left-header-of-box">
+                    <div class="logo-left-header">
+                        <img src="../images/logos/JK-logo.svg" alt="">
+                    </div>
+                    <div class="text-left-header">
+                        <b style="font-family: Mulish-Black;">Jozef Karman</b> <br>Konateľ <a href="#" class="link-header-box">SvetNápojov.sk</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box">
+                <p class="text-in-daBOX"><img class="apo" src="../images/logos/apostrophe-symbol.svg" alt="">S UX tímom Riešení úzko spolupracujeme už dlhé roky a sú dôležitým partnerom nášho biznisu. Vďaka ich know-how pre nás od samého začatku správne nastavili zdravý pomer prvotriedneho dizajnu a funkčnosti webu, ktorý následne vylepšovali pomocou relevantných analýz a dát. Aj ich zásluhou … <b style="color: #EE325C;cursor: pointer;">čítať viac</b></p>
+                <div class="right-header-of-box">
+                    <div class="logo-right-header">
+                        <img src="../images/logos/RW-logo.svg" alt="">
+                    </div>
+                    <div class="text-right-header">
+                        <b style="font-family: Mulish-Black;">Richard Wohlstein </b><br>Retail manager <a href="#" class="link-header-box">AlainDelon.sk</a>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- Section of title in the middle -->
+        <section class="title-alone imp">
+            <h1 class="text-in-alone-title">Rýchla a jednoduchá<br> cesta k <b class="word">výsledkom.</b></h1>
+        </section>
+        <!-- Section of title 1 and arrow -->
+        <section class="group-nums-arrs imp">
+            <div class="left-num-text">
+                <div class="number-l">
+                    <img src="../images/numbers-arrows/1.svg" alt="">
+                </div>
+                <div class="number-text-l">
+                    <p><b style="font-family: Mulish-Black; font-size: 1.5rem;">Ciele auditu </b> <br>Určíme si <b>spoločné ciele,</b> nastavíme očakávania a definujeme <b>cieľovú skupinu a jej potreby.</b></p>
+                </div>
+            </div>
+            <div class="right-arr">
+                <img src="../images/numbers-arrows/arrow1.svg" alt="">
+            </div>
+        </section>
+        <!-- Section of title 2 and arrow -->
+        <section class="group-nums-arrs-2 imp">
+            <div class="left-arr">
+                <img src="../images/numbers-arrows/arrow2.svg" alt="">
+            </div>
+            <div class="right-num-text">
+                <div class="number-r">
+                    <img src="../images/numbers-arrows/2.svg" alt="">
+                </div>
+                <div class="number-text-r">
+                    <p><b style="font-family: Mulish-Black; font-size: 1.5rem;">Zbieranie dát </b><br> Zvolíme vhodné metodiky a nástroje na<br><b> sledovanie správania používateľov a zbieranie dát.</b></p>
+                </div>
+            </div>
+        </section>
+        <!-- Section of title 3 and arrow -->
+        <section class="group-nums-arrs imp">
+            <div class="left-num-text">
+                <div class="number-l">
+                    <img src="../images/numbers-arrows/3.svg" alt="">
+                </div>
+                <div class="number-text-l">
+                    <p><b style="font-family: Mulish-Black; font-size: 1.5rem;">Vyhodnotenie </b> <br><b>Vyhodnotíme nazbierané dáta,</b> zosumarizujeme všetky naše zistenia a <b> navrhneme riešenia.</b></p>
+                </div>
+            </div>
+            <div class="right-arr">
+                <img src="../images/numbers-arrows/arrow1.svg" alt="">
+            </div>
+        </section>
+        <!-- Section of title 4 and arrow -->
+        <section class="group-nums-arrs-2 imp">
+            <div class="left-arr">
+            </div>
+            <div class="right-num-text">
+                <div class="number-r">
+                    <img src="../images/numbers-arrows/4.svg" alt="">
+                </div>
+                <div class="number-text-r">
+                    <p><b style="font-family: Mulish-Black; font-size: 1.5rem;">Výsledky auditu</b> <br><b>Osobná prezentácia výsledkov a navrhnutých riešení</b> s podrobnou dokumentáciou.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section title alone on left -->
+        <section class="title-alone-left imp">
+            <h1 class="text-in-alone-title">Zameriame sa na to<br><b class="word">najdôležitejšie.</b></h1>
+        </section>
+        <!-- section of title and button on left and list on right side -->
+        <section class="group-text-btn-list imp">
+            <div class="text-btn-left">
+                <div class="text-top">
+                    <p>Dosiahnite lepšie výsledky vašej webstránky alebo e-shopu <b style="font-family: Mulish-ExtraBold;">pomocou UX auditu.</b></p>
+                </div>
+                <div class="btn-bottom">
+                    <button class="btn3" onclick="openModal()"><span class="front">Mám záujem o UX audit</span></button>
+                </div>
+            </div>
+            <div class="list2-right">
+                <ul class="list2">
+                    <li class="li2"> Informačnú architektúru a štruktúru kategórií</li>
+                    <li class="li2"> Správanie návštevníkov na kľúčových stránkach</li>
+                    <li class="li2"> Rýchlosť a dostupnosť stránok, SEO nastavenia</li>
+                    <li class="li2"> Váš biznis a vašich zákazníkov</li>
+                    <li class="li2"> Ciele, ktoré chcete dosiahnuť</li>
+                    <li class="li2"> Webovú analytiku </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <!-- Footer section -->
+    <footer class="footer">
+            <div class="footer-text">
+                <h1 class="ft-txt">Máte otázky? Jednoducho sa spýtajte.</h1>
+            </div>
+            <div class="footer-num-email imp">
+                <div class="num">+421 (02) 555 65 726</div>
+                <div class="gmail"><b>uxdesign@riesenia.com</b></div>
+                   
+            </div>
+            <div class="footer-logo">
+                <img src="../images/logos/bottom-logo.svg" alt="">
+            </div>
+    </footer>
+
+    
+</body>
+</html>

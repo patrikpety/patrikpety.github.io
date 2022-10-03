@@ -1,0 +1,65 @@
+
+
+$primary-color: white;
+$secondary-color: black;
+$specific-color: #EE325C;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* imporant*/
+.imp {
+    display: flex;
+    width: 100%;
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+/* Added fonts */
+@font-face {
+    font-family: Mulish-Black;
+    src: url('../Fonts/Mulish-Black.ttf');
+}
+@font-face {
+    font-family: Mulish-BlackItalic;
+    src: url('../Fonts/Mulish-BlackItalic.ttf');
+}
+@font-face {
+    font-family: Mulish-Bold;
+    src: url('../Fonts/Mulish-Bold.ttf');
+}
+@font-face {
+    font-family: Mulish-BoldItalic;
+    src: url('../Fonts/Mulish-BoldItalic.ttf');
+}
+@font-face {
+    font-family: Mulish-ExtraBold;
+    src: url('../Fonts/Mulish-ExtraBold.ttf');
+}
+@font-face {
+    font-family: Mulish-ExtraBoldItalic;
+    src: url('../Fonts/Mulish-ExtraBoldItalic.ttf');
+}
+@font-face {
+    font-family: Mulish-ExtraLight;
+    src: url('../Fonts/Mulish-ExtraLight.ttf');
+}
+@font-face {
+    font-family: Mulish-ExtraLightItalic;
+    src: url('../Fonts/Mulish-ExtraLightItalic.ttf');
+}
+@font-face {
+    font-family: Mulish-Regular;
+    src: url('../Fonts/Mulish-Regular.ttf');
+}
+@font-face {
+    font-family: Mulish-SemiBold;
+    src: url('../Fonts/Mulish-SemiBold.ttf');
+}
+@font-face {
+    font-family: Mulish-Regular;
+    src: url('../Fonts/Mulish-Regular.ttf');
+}

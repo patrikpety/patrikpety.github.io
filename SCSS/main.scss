@@ -1,0 +1,487 @@
+@import './config.scss';
+@import './contact-form.scss';
+@import './responsive.scss';
+@import './header-footer.scss';
+
+
+/**** Main container of all content without header and footer ****/
+.main-container {
+    width: 100%;
+    padding: 0% 24%;
+    @include ntbk {
+        padding: 0% 18%;
+    }
+    @include smlntbk {
+        padding: 0% 12%;
+    }
+    @include lgtablet {
+        padding: 0% 3%;
+    }
+    @include tablet {
+        padding: 0% 25%;
+    }
+    @include lgphone {
+        padding: 0% 15%;
+    }
+    @include phone {
+        padding: 0% 10%;
+    }
+}
+
+/**** Section title on left and logos on right ****/
+.group-title-logos {
+    margin-top: 5%;
+    justify-content: center;
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+    .left-title {
+        width: 50%;
+        text-align: left;
+        font-family: Mulish-Bold;
+        vertical-align: top;
+        line-height: 4rem;
+        font-size: 3rem;
+        padding-right: 12%;
+        @include tablet {
+            width: 100%;
+            padding-right: 0%;
+            line-height: 2.75rem;
+            font-size: 2rem;
+            padding-right: 0%;
+        }
+        .word {
+            border-bottom: 14px solid pink;
+            @include tablet {
+                border-bottom: 10px solid pink;
+            }
+        }
+        span {
+            display: block;
+            opacity: 0;
+            animation: reveal 1s forwards var(--delay);
+        }
+        @keyframes reveal {
+            from { translate: 0 100px; }
+            to { translate: none; opacity: 1; }
+        }
+    }
+    .right-logos {
+        width: 50%;
+        vertical-align: top;
+        text-align: left;
+        padding-left: 4%;
+        @include tablet {
+            width: 100%;
+            padding-left: 0%;
+            margin: 9% 0%;
+        }
+        .google-logo {
+            width: 200px;
+            @include tablet {
+                width: 50%;
+            }
+        }
+        .member-log {
+            width: 220px;
+            padding-left: 50px;
+            @include tablet {
+                padding-left: 2%;
+                width: 45%;
+            }
+        }
+    }
+}
+/**** Section of text on the left 
+and list on right side ****/
+.group-text-list {
+    @include tablet {
+        flex-direction: column;
+    }
+    .text-left {
+        padding-top: 9%;
+        width: 50%;
+        text-align: left;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+        font-family: Mulish-Regular;
+        padding-right: 4.5%;
+        @include tablet {
+            width: 100%;
+            font-size: 1.25rem;
+            padding-right: 0%;
+        }
+    }
+    .list-right {
+        width: 50%;
+        font-family: Mulish-SemiBold;
+        padding-left: 5%;
+        @include tablet {
+            width: 100%;
+            padding-left: 0%;
+        }
+        .list {
+            margin-top: -5%;
+            @include tablet {
+                margin-top: 9%;
+            }
+            li {
+                font-size: 18px;
+                padding: 10px 0px;
+                background: url('../images/logos/green-list-icon.svg') no-repeat 0px 14px transparent;
+                list-style-type: none;
+                margin: 0;
+                padding: 15px 0px 15px 35px;
+                vertical-align: middle;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    transform:scale(1.1);
+                }
+                @include tablet {
+                    background: url('../images/logos/green-list-icon.svg') no-repeat 0px 15px transparent;
+                    padding: 15px 0px 15px 50px;
+                }
+            }
+        }
+    }
+}
+
+/**** Section left text - right button ****/
+.group-text-btn {
+    margin: 5% 0%;
+    padding: 5% 0%;
+    .short-text-left {
+        width: 50%;
+        font-family: Mulish-Regular;
+        text-align: left;
+        line-height: 2.5rem;
+        font-size: 1.38rem;
+        padding-right: 2%;
+        @include tablet {
+            width: 100%;
+            padding-right: 0%;
+        }
+    }
+    .btn-right {
+        width: 50%;
+        padding-left: 4%;
+        text-align: center;
+        margin-top: 1%;
+        font-family: Mulish-black;
+        @include tablet {
+            width: 100%;
+            padding-left: 0%;
+            margin: 20% 0% 10% 0%;
+        }
+        .btn2 {
+            background-color: hsl(340deg 100% 32%);
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            outline-offset: 4px;
+            .front {
+                display: block;
+                padding: 10px 100px;
+                border-radius: 12px;
+                line-height: 3.25rem;
+                font-size: 1.25rem;
+                background: hsl(345deg 100% 47%);
+                font-family: Mulish-Black;
+                color: $primary-color;
+                transform: translateY(-6px);
+                @include tablet {
+                    padding: 10px 60px;
+                }
+                @include phone {
+                    padding: 5px 15px;
+                }
+            }
+        }
+        .front:hover {
+            background-color: #cf002d;
+        }
+        .btn2:active .front {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+/**** Section 2-boxes ****/
+.group-two-boxes {
+    padding: 2% 0%;
+    .left-box {
+        width: 50%;
+        padding-right: 3%;
+        @include tablet {
+            width: 100%;
+            padding-right: 0%;
+            padding: 8% 0%;
+        }
+        .left-header-of-box {
+            display: flex;
+            font-family: Mulish-Regular;
+            padding: 8% 0%;
+            text-align: left;
+            line-height: 1.38rem;
+            font-size: 1rem;
+            .logo-left-header {
+                width: 15%;
+                @include tablet {
+                    width: 20%;
+                }
+            }
+            .text-left-header {
+                padding: 2%;
+                padding-left: 4%;
+            }
+        }
+    }
+    .right-box {
+        width: 50%;  
+        padding-left: 3%;
+        @include tablet {
+            width: 100%;
+            padding-left: 0%;
+            padding: 8% 0%;
+        }
+        .right-header-of-box {
+            display: flex;
+            font-family: Mulish-Regular;
+            text-align: left;
+            padding: 8% 0%;
+            line-height: 1.38rem;
+            font-size: 1rem;
+            .logo-right-header {
+                width: 15%;
+                @include tablet {
+                    width: 20%;
+                }
+            }
+            .text-right-header {
+                padding: 2%;
+                padding-left: 4%;
+            }
+        }
+    }
+    .link-header-box {
+        text-decoration: none;
+        font-family: Mulish-Bold;
+        color: $specific-color;
+    }
+    .apo {
+        position: absolute;
+        margin-top: -53px;
+        @include tablet {
+            margin-top: -52px;
+        }
+    }
+    .text-in-daBOX {
+        border: 1px solid #D8D8D8;
+        line-height: 2rem;
+        font-size: 1rem;
+        font-family: Mulish-Regular;
+        padding: 6%;
+    }
+}
+
+/**** Section Title in the middle alone****/
+.title-alone {
+    padding: 8% 0%;
+    text-align: center;
+    justify-content: center;
+    .text-in-alone-title {
+        font-family: Mulish-Bold;
+        line-height: 4rem;
+        font-size: 3rem;
+        .word {
+            border-bottom: 14px solid pink;
+            @include tablet {
+                border-bottom: 10px solid pink;
+            }
+        }
+        @include tablet {
+            line-height: 2.75rem;
+            font-size: 2rem;
+        }
+    }
+}
+
+/**** Section Numbers and Arrows 
+(number and text left - arrow right)****/
+.group-nums-arrs {
+    padding: 2% 0%;
+    .left-num-text {
+        display: flex;
+        width: 50%;
+        @include tablet {
+            width: 100%;
+            padding: 10% 0%;
+        }
+        .number-text-l {
+            padding-left: 6%;
+            line-height: 1.75rem;
+            font-family: Mulish-Regular;
+            @include tablet {
+                margin-top: -5%;
+                padding-left: 8%;
+            }
+        }
+    }
+    .right-arr {
+        padding-left: 4%;
+        margin-top: 5%;
+        display: flex;
+        width: 50%;
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+/**** Section Numbers and Arrows 
+(arrow left - number and text right )****/
+.group-nums-arrs-2 {
+    padding: 1% 0%;
+    .left-arr {
+        justify-content: right;
+        margin-top: 5%;
+        padding-right: 6%;
+        display: flex;
+        width: 50%;
+        @include tablet {
+            display: none;
+        }
+    }
+    .right-num-text {
+        display: flex;
+        width: 50%;
+        @include tablet {
+            width: 100%;
+            padding: 10% 0%;
+        }
+        .number-text-r {
+            padding-left: 6%;
+            line-height: 1.75rem;
+            font-family: Mulish-Regular;
+            @include tablet {
+                margin-top: -5%;
+            }
+        }
+    }
+}
+
+/**** Section Title on left****/
+.title-alone-left {
+    margin-top: 6%;
+    text-align: left;
+    justify-content: left;
+    @include tablet {
+        text-align: center;
+    }
+    .text-in-alone-title {
+        font-family: Mulish-Bold;
+        line-height: 4rem;
+        font-size: 3rem;
+        @include tablet {
+            line-height: 2.75rem;
+            font-size: 2rem;
+        }
+        .word {
+            border-bottom: 14px solid pink;
+            @include tablet {
+                border-bottom: 10px solid pink;
+            }
+        }
+    }
+}
+
+/**** Section text-button-list *****/
+.group-text-btn-list {
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+    .text-btn-left {
+        padding-top: 7%;
+        width: 50%;
+        text-align: left;
+        line-height: 2.5rem;
+        font-size: 1.63rem;
+        font-family: Mulish-Regular;
+        padding-right: 5%;
+        @include tablet {
+            width: 100%;
+            font-size: 1.38rem;
+            padding-right: 0%;
+        }
+        .text-top {
+            margin-bottom: 13%;
+        }
+        .btn-bottom {
+            @include tablet {
+                text-align: center;
+            }
+            .btn3 {
+                background-color: hsl(340deg 100% 32%);
+                border-radius: 12px;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                outline-offset: 4px;
+                
+                .front {
+                    display: block;
+                    padding: 10px 80px;
+                    border-radius: 12px;
+                    line-height: 3.25rem;
+                    font-size: 1.25rem;
+                    background: hsl(345deg 100% 47%);
+                    font-family: Mulish-Black;
+                    color: $primary-color;
+                    transform: translateY(-6px);
+                    @include tablet {
+                        padding: 10px 60px;
+                    }
+                    @include phone {
+                        padding: 5px 15px;
+                    }
+                }
+            }
+            .front:hover {
+                background-color: #cf002d;
+            }
+            .btn3:active .front {
+                transform: translateY(-2px);
+            }
+        }
+    }
+    .list2-right {
+        width: 50%;
+        font-family: Mulish-SemiBold;
+        padding-left: 4%;
+        @include tablet {
+            width: 100%;
+            padding-left: 0%;
+        }
+        .list2 {
+            @include tablet {
+                margin-top: 15%;
+            }
+            .li2 {
+                font-size: 18px;
+                padding: 10px 0px;
+                background: url('../images/logos/green-list-icon.svg') no-repeat 0px 14px transparent;
+                list-style-type: none;
+                margin: 0;
+                padding: 15px 0px 15px 35px;
+                vertical-align: middle;
+                @include tablet {
+                    padding: 15px 0px 15px 50px;
+                    background: url('../images/logos/green-list-icon.svg') no-repeat 0px 15px transparent;
+
+                }
+            }
+        }
+    }
+}
+

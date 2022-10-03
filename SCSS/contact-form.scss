@@ -1,0 +1,179 @@
+
+
+/* Animations for modal*/
+@-webkit-keyframes animatetop {
+    from {top:-100px; opacity:0} 
+    to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+}
+
+/* Modal section*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(255,255,255); 
+    background-color: rgba(255, 253, 253, 0.9); 
+    
+    &-content {
+        position: relative;
+        background-color: $primary-color;
+        margin: auto;
+        padding: 0;
+        max-width: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+
+        &-header {
+            padding: 2px 16px;
+            background-color: $primary-color;
+            color: $secondary-color;
+            text-align: right;
+            padding: 0% 10%;
+            padding-top: 4%;
+            .close {
+                color: $primary-color;
+                width: 32px;
+                text-align: center;
+                position: absolute;
+                margin-left: 2%;
+                margin-top: -2%;
+                font-size: 28px;
+                font-weight: bold;
+                background-color: $specific-color;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out;
+                &:hover,
+                &:focus {
+                color: $secondary-color;
+                text-decoration: none;
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+            }
+            .modal-textt{
+                text-align: center;
+                font-family: Mulish-Black;
+                font-size: 1.88rem;
+                line-height: 2.75rem;
+            }
+        }
+        .modal-body {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0% 6%;
+            background-color: white;
+            border-radius: 8px;
+            .form-group {
+                width: 100%;
+                margin-top: 1.3rem;
+                font-family: Mulish-Black;
+                font-size: 1rem;
+                .txt-area {
+                    padding: 2% 2% 10% 2%;
+                }
+                .g2 {
+                    width: 47%;
+                    margin-top: 0;
+                    margin-bottom: 1.3rem;
+                    float: left;
+                    font-family: Mulish-Black;
+                }
+                .g3 {
+                    width: 47%;
+                    margin-top: 0;
+                    margin-bottom: 1.3rem;
+                    float: right;
+                    font-family: Mulish-Black;
+                }
+            }
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 5px;
+                font-size: 1.2rem;
+                border: none;
+                background-color: #efefef;
+                margin-top: 5px;
+                border-radius: 4px; 
+            }
+            textarea {
+                resize: vertical;
+                font-family: Mulish-Regular;
+                font-size: 1rem;
+            }   
+        }
+        .modal-footer {
+          padding: 4% 6%;
+          background-color: $primary-color;
+          color: white;
+          text-align: center;
+            button[type="submit"] {
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 20px;
+                font-size: 1.5rem;
+                border-radius: 8px;
+                font-family: Mulish-Black;
+                color: $primary-color;
+                background-color: $specific-color;
+                text-align: center;
+                cursor: pointer;
+                transition: 0.1s ease-in-out;
+                
+            }
+            button[type="submit"]:hover {
+                background-color: #f50035;
+                font-size: 1.7rem;
+                padding: 18px;
+            }
+            #status {
+                width: 100%;
+                text-align: center;
+                margin-top: 1%;
+                padding: 10px;
+                margin: 0 auto;
+                border-radius: 8px;
+                font-family: Mulish-Black;
+                &.success {
+                    background-color: rgb(211, 250, 153);
+                    animation: status 4s ease forwards;
+                }
+                &.error {
+                    background-color: rgb(250, 129, 92);
+                    color: white;
+                    animation: status 4s ease forwards;
+                }
+            }
+        }
+    }
+}
